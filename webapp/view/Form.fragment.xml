@@ -1,0 +1,136 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        id="formId"
+        title="{i18n>formTambahKaryawanTitle}"
+    >
+        <content>
+            <VBox class="editFormStyle">
+                <Text
+                    text="Plant"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <Input
+                    type="Text"
+                    placeholder="Plant"
+                    id="werksId"
+                    width="90%"
+                    class="sapUiSmallMarginBeginEnd"
+                />
+                <Text
+                    text="Nama"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <Input
+                    type="Text"
+                    placeholder="Nama"
+                    width="90%"
+                    class="sapUiSmallMarginBeginEnd"
+                    id="namaId"
+                />
+                <Text
+                    text="NIK"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <Input
+                    type="Text"
+                    placeholder="NIK"
+                    width="90%"
+                    class="sapUiSmallMarginBeginEnd"
+                    id="nikId"
+                />
+                <Text
+                    text="Department"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <ComboBox
+                    id="departmentId"
+                    items="{listForm>/department}"
+                    width="90%"
+                    class="sapUiSmallMarginBeginEnd"
+                    placeholder="Departemen"
+                >
+                    <core:Item
+                        text="{listForm>text}"
+                        key="{listForm>key}"
+                    />
+                </ComboBox>
+                <Text
+                    text="Gaji"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <Input
+                    type="Text"
+                    placeholder="Gaji"
+                    width="90%"
+                    class="sapUiSmallMarginBeginEnd"
+                    id="gajiId"
+                />
+                <Text
+                    text="Currency"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <ComboBox
+                    id="currId"
+                    placeholder="Currency"
+                    class="sapUiSmallMarginBeginEnd"
+                    width="60%"
+                    items="{/CURRENCYSet}"
+                >
+                    <core:Item
+                        text="{Curr}"
+                        key="{Curr}"
+                    />
+                </ComboBox>
+                <Text
+                    text="Gelar"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <ComboBox
+                    id="gelarId"
+                    items="{listForm>/gelar}"
+                    width="60%"
+                    class="sapUiSmallMarginBeginEnd"
+                    placeholder="Gelar"
+                >
+                    <core:Item
+                        text="{listForm>text}"
+                        key="{listForm>key}"
+                    />
+                </ComboBox>
+                <Text
+                    text="Status"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                />
+                <ComboBox
+                    id="statusId"
+                    items="{listForm>/status}"
+                    width="60%"
+                    class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+                    placeholder="Status Pekerjaan"
+                >
+                    <core:Item
+                        text="{listForm>text}"
+                        key="{listForm>key}"
+                    />
+                </ComboBox>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button
+                text="{i18n>formCancelButtonText}"
+                class="sapUiBorder sapUiBorderThick"
+                press=".onCloseButton"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                text="{i18n>formSubmitButtonText}"
+                class="sapUiBorder sapUiBorderThick"
+                press=".onAddEmployee"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

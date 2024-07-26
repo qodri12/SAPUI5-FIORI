@@ -1,0 +1,132 @@
+<mvc:View
+    controllerName="project2.controller.employeeTable"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:table="sap.ui.table"
+>
+    <Table
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{/EMPLOYEESet}"
+        id="employeeTableId"
+    >
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Employee List" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Plant" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="NIK" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Nama" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Departemen" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Gaji" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Curr" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Gelar" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Contract Status" />
+            </Column>
+            <Column
+                hAlign="Center"
+                vAlign="Top"
+                width="auto"
+            >
+                <Label text="Actions" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem type="Active" press=".onEmployeeSelect">
+                <cells>
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Werks}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{UserId}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Nama}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Department}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Gaji}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Waers}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Gelar}"
+                    />
+                    <Text
+                        class="sapUiSmallMargin"
+                        text="{Status}"
+                    />
+                    <HBox class="tableActionButton">
+                        <Button
+                            icon="sap-icon://edit"
+                            press=".onEditButton"
+                        />
+                        <Button
+                            icon="sap-icon://delete"
+                            press=".onDeleteEmployee"
+                        />
+                    </HBox>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

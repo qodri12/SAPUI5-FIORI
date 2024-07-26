@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z_MHQ_GETODATA_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="EMPLOYEE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UserId"/>
+                </Key>
+                <Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="MEDIUM ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nama" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="MEDIUM NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gelar" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="GELAR KARYAWAN" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gaji" Type="Edm.Decimal" Nullable="false" Precision="17" Scale="3" sap:unicode="false" sap:unit="Waers" sap:label="GAJI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="Department" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="DEPARTMENT NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="WORK STATUS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="Z_MHQ_GETODATA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="EMPLOYEESet" EntityType="Z_MHQ_GETODATA_SRV.EMPLOYEE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://iditvshana01.ag-it.com/sap/opu/odata/sap/Z_MHQ_GETODATA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://iditvshana01.ag-it.com/sap/opu/odata/sap/Z_MHQ_GETODATA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

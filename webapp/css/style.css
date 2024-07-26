@@ -1,0 +1,13 @@
+/* Enter your custom styles here */
+.tableActionButton {
+    gap: 10px;
+    justify-content: center;
+}
+
+.employeeTableStyle{
+    font-size: 5px;
+}
+
+.editFormStyle{
+    overflow-x: hidden;
+}

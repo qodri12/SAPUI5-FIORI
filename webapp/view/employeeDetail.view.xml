@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="project2.controller.employeeDetail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:table="sap.ui.table"
+>
+    <List
+        headerText="{i18n>detailListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        id="employeeDetailList"
+        items="{ 
+            path: 'detailModel>/'
+         }"
+    >
+        <CustomListItem>
+            <HBox
+                class="sapUiSmallMargin"
+                width="auto"
+                alignItems="Center"
+            >
+                <VBox class="sapUiSmallMargin">
+                    <Button
+                        icon="sap-icon://edit"
+                        press=""
+                    />
+                </VBox>
+                <HBox
+                    justifyContent="SpaceBetween"
+                    width="100%"
+                    alignItems="Center"
+                >
+                    <VBox>
+                        <Text text="Muhammad Hadyan Qodri" />
+                        <Label text="{detailModel>Prmid}" />
+                    </VBox>
+                    <VBox>
+                        <Text text="{detailModel>Jabtn}" />
+                        <Label
+                            text="{
+                            path: 'detailModel>Asgon',
+                            formatter:'.formatter.dateFormat'
+                        }"
+                        />
+                    </VBox>
+                </HBox>
+            </HBox>
+        </CustomListItem>
+    </List>
+</mvc:View>

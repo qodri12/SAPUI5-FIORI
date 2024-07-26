@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="project2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <Panel
+            headerText="{i18n>dashboardTitle}"
+            class="sapUiResponsiveMargin"
+            width="auto"
+        >
+            <content>
+                <Button
+                    id="addKaryawanButton"
+                    text="{i18n>addButton}"
+                    press=".onOpenButton"
+                />
+                <mvc:XMLView viewName="project2.view.employeeTable" />
+            </content>
+        </Panel>
+        <Panel
+            headerText="{i18n>masterDetailTitle}"
+            class="sapUiResponsiveMargin"
+            width="auto"
+        >
+            <content>
+                <Button
+                    id="addRoleButton"
+                    text="{i18n>addRoleButton}"
+                    press=""
+                />
+                <mvc:XMLView viewName="project2.view.employeeDetail" />
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>
