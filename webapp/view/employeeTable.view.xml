@@ -115,7 +115,7 @@
                         class="sapUiSmallMargin"
                         text="{Status}"
                     />
-                    <HBox class="tableActionButton">
+                    <HBox class="tableActionButton" justifyContent="Center" direction="Row">
                         <Button
                             icon="sap-icon://edit"
                             press=".onEditButton"

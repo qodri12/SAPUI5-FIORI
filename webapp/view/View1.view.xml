@@ -31,7 +31,7 @@
                 <Button
                     id="addRoleButton"
                     text="{i18n>addRoleButton}"
-                    press=""
+                    press=".onOpenAddRoleButton"
                 />
                 <mvc:XMLView viewName="project2.view.employeeDetail" />
             </content>

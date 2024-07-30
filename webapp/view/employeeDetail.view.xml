@@ -10,7 +10,7 @@
         width="auto"
         id="employeeDetailList"
         items="{ 
-            path: 'detailModel>/'
+            path: 'detailModel>/details'
          }"
     >
         <CustomListItem>
@@ -19,10 +19,14 @@
                 width="auto"
                 alignItems="Center"
             >
-                <VBox class="sapUiSmallMargin">
+                <VBox class="tableActionButton sapUiSmallMargin" direction="Row">
                     <Button
                         icon="sap-icon://edit"
-                        press=""
+                        press=".onEditRoleButton"
+                    />
+                    <Button
+                        icon="sap-icon://delete"
+                        press=".onDeleteRole"
                     />
                 </VBox>
                 <HBox
@@ -31,7 +35,7 @@
                     alignItems="Center"
                 >
                     <VBox>
-                        <Text text="Muhammad Hadyan Qodri" />
+                        <Text text="{detailModel>/employee/Nama}" />
                         <Label text="{detailModel>Prmid}" />
                     </VBox>
                     <VBox>

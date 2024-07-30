@@ -1,0 +1,90 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        id="editRoleFormId"
+        title="{i18n>formEditRoleTitle}"
+    >
+        <content>
+            <VBox class="editFormStyle">
+                <Text
+                    text="NIK"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                    width="90%"
+                />
+                <Input
+                    type="Text"
+                    class="sapUiSmallMarginBeginEnd"
+                    width="90%"
+                    placeholder="NIK by UserId"
+                    id="editRoleNikId"
+                    editable="false"
+                />
+                <Text
+                    text="Promotion Id"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                    width="90%"
+                />
+                <Input
+                    type="Number"
+                    class="sapUiSmallMarginBeginEnd"
+                    width="90%"
+                    placeholder="Promotion Id"
+                    id="editRolePrmid"
+                    editable="false"
+                />
+                <Text
+                    text="Nama"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                    width="90%"
+                />
+                <Input
+                    type="Text"
+                    class="sapUiSmallMarginBeginEnd"
+                    width="90%"
+                    placeholder="Nama by UserId"
+                    id="editRoleNamaId"
+                    editable="false"
+                />
+                <Text
+                    text="Role / Jabatan"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                    width="90%"
+                />
+                <Input
+                    type="Text"
+                    class="sapUiSmallMarginBeginEnd"
+                    width="90%"
+                    placeholder="Role by PromotionId"
+                    id="editRoleId"
+                />
+                <Text
+                    text="Tanggal"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                    width="90%"
+                />
+                <Input
+                    type="Date"
+                    class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+                    width="90%"
+                    id="editRoleDateId"
+                />
+            </VBox>
+        </content>
+        <beginButton>
+            <Button
+                text="{i18n>formCancelButtonText}"
+                class="sapUiBorder sapUiBorderThick"
+                press=".onCloseButton"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                text="{i18n>formSubmitButtonText}"
+                class="sapUiBorder sapUiBorderThick"
+                press=".onSubmitEditRole"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
