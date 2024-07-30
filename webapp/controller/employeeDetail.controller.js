@@ -95,7 +95,7 @@ sap.ui.define([
                     var oDetailModel = this.getView().getModel("detailModel");
                     var sUserId = oDetailModel.getProperty("/employee/UserId");
                     var oEventBus = sap.ui.getCore().getEventBus();
-                    oEventBus.publish("employee", "selected", { UserId: sUserId });
+                    oEventBus.publish("employee", "roleAdded", { UserId: sUserId });
                 },
                 error: () => {
                     MessageToast.show("Failed to update role");
@@ -114,7 +114,7 @@ sap.ui.define([
                     var oDetailModel = this.getView().getModel("detailModel");
                     var sUserId = oDetailModel.getProperty("/employee/UserId");
                     var oEventBus = sap.ui.getCore().getEventBus();
-                    oEventBus.publish("employee", "selected", {UserId: sUserId});
+                    oEventBus.publish("employee", "roleAdded", {UserId: sUserId});
                 },
                 error: (oError) => {
                     MessageToast.show("Gagal menghapus peran: "+ oError.message);
